@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppNota.Views.PageCadastrar" Title="Cadastro/Edição de Notas">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="txtCodigo" IsVisible="False" IsEnabled="False"/>
+            <Entry x:Name="txtTitulo" Keyboard="Plain" Placeholder="Título da Nota"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nota favorita:" FontSize="Medium"/>
+                <Switch x:Name="swFavoritos" HorizontalOptions="Start"/>
+            </StackLayout>
+            <Editor x:Name="txtDados" Keyboard="Plain" Placeholder="Dados da Nota" VerticalOptions="FillAndExpand" Margin="20"/>
+            <StackLayout Orientation="Horizontal" Margin="20,0,20,20">
+                <Button x:Name="btSalvar" Text="Inserir" Clicked="btSalvar_Clicked" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="btExcluir" Text="Excluir" Clicked="btExcluir_Clicked" IsVisible="False" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
